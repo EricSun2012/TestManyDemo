@@ -45,13 +45,24 @@ public class DownloadActivity extends BaseActivity<DownloadPresenter> {
                 DownloadEntity entity = presenter.startDownloadTask(downloadUrl, new DownloadListener() {
                     @Override
                     public void onProgress(int progress) {
-                        bar.setProgress(progress);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                bar.setProgress(progress);
+                            }
+                        });
                     }
 
                     @Override
                     public void onSuccess() {
-                        bar.setProgress(100);
-                        Toast.makeText(DownloadActivity.this, "下载完成", Toast.LENGTH_SHORT).show();
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                bar.setProgress(100);
+                                Toast.makeText(DownloadActivity.this, "下载完成", Toast.LENGTH_SHORT).show();
+                            }
+                        });
                     }
 
                     @Override
@@ -61,8 +72,14 @@ public class DownloadActivity extends BaseActivity<DownloadPresenter> {
 
                     @Override
                     public void onPaused() {
-                        Button button = firstView.findViewById(R.id.download_now);
-                        button.setText("继续");
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Button button = firstView.findViewById(R.id.download_now);
+                                button.setText("继续");
+                            }
+                        });
+
                     }
 
                     @Override
