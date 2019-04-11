@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".RxJava.RxActivity"/>
         <activity android:name=".animate.AnimateActivity" />
         <activity android:name=".advertise.AdvertiseActivity" />
         <activity android:name=".gouwuche.BuyCarActivity" />

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.robot.anyDemo.RxJava.RxActivity;
 import com.robot.anyDemo.animate.AnimateActivity;
 import com.robot.anyDemo.dataStructure.DataStructureActivity;
 import com.robot.anyDemo.download.DownloadActivity;
@@ -27,7 +28,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
 
     public MyListAdapter(Context context) {
         mContext = context;
-        contents = new String[]{"动画总结", "room初步使用", "", "购物车动画", "广告轮播图", "greendao配置使用[未]", "断点续传", "缓存配置[未]", "数据结构", "MVP结构", "retrofit&okhttp使用", "NestedScroll", "等等"};
+        contents = new String[]{"动画总结", "room初步使用", "RxJava", "购物车动画", "广告轮播图", "greendao配置使用[未]", "断点续传", "缓存配置[未]", "数据结构", "MVP结构", "retrofit&okhttp使用", "NestedScroll", "等等"};
     }
 
 
@@ -57,7 +58,11 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
                     case 1: {
                         Intent mIntent = new Intent(mContext, RoomActivity.class);
                         mContext.startActivity(mIntent);
-
+                    }
+                    break;
+                    case 2: {
+                        Intent mIntent = new Intent(mContext, RxActivity.class);
+                        mContext.startActivity(mIntent);
                     }
                     break;
                     case 3: {
