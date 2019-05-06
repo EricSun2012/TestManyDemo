@@ -3,6 +3,7 @@ package com.robot.anyDemo.retrofit;
 
 import java.util.HashMap;
 
+import io.reactivex.Observable;
 import retrofit2.Call;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
@@ -18,4 +19,8 @@ public interface ApiServer {
     @FormUrlEncoded
     @POST("update")
     Call<Object> submitMobileInfo(@FieldMap HashMap<String, String> map);
+
+
+    @GET("getMobileInfo")
+    Observable<String> getRxMobileInfo(@Query("mobile") String mobile);
 }
