@@ -4,7 +4,7 @@
     package="com.robot.anyDemo">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".RxJava.RxActivity"/>
+        <activity android:name=".RxJava.RxActivity" />
         <activity android:name=".animate.AnimateActivity" />
         <activity android:name=".advertise.AdvertiseActivity" />
         <activity android:name=".gouwuche.BuyCarActivity" />
@@ -30,6 +30,8 @@
         <activity android:name=".room.RoomActivity" />
         <activity android:name=".dataStructure.DataStructureActivity" />
         <activity android:name=".download.DownloadActivity" />
+        <activity android:name=".panorama.PanoramaActivity" />
+        <activity android:name=".ThridDimensional.ThirdDimensionActivity" />
     </application>
 
 </manifest>
