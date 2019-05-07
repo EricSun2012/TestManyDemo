@@ -36,13 +36,20 @@ import java.util.List;
  * 和UI操作相关的类
  */
 public class UIUtil {
+
+    private static Context Application = null;
+
+    public static void setContext(Context context) {
+        Application = context;
+    }
+
     /**
      * 上下文的获取
      *
      * @return
      */
     public static Context getContext() {
-        return null;
+        return Application;
     }
 
     /**

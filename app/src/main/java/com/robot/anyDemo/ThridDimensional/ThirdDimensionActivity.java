@@ -15,6 +15,7 @@ public class ThirdDimensionActivity extends BaseActivity<ThreeDimensionPresenter
         return R.layout.activity_three_dimension;
     }
 
+
     @Override
     public void initData() {
         setTitle("3D动画");

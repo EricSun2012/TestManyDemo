@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.robot.anyDemo.adapter.MyListAdapter;
+import com.robot.anyDemo.tools.UIUtil;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        UIUtil.setContext(getApplicationContext());
         recyclerView = findViewById(R.id.recycleView);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
