@@ -22,6 +22,7 @@ import com.robot.anyDemo.nestedScroll.NestedScrollActivity;
 import com.robot.anyDemo.panorama.PanoramaActivity;
 import com.robot.anyDemo.retrofit.RetrofitActivity;
 import com.robot.anyDemo.room.RoomActivity;
+import com.robot.anyDemo.touchconflict.TouchConflictActivity;
 
 public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHolder> {
 
@@ -33,7 +34,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
         contents = new String[]{"动画总结", "room初步使用", "RxJava",
                 "购物车动画", "广告轮播图", "greendao配置使用[未]", "断点续传",
                 "缓存配置[未]", "数据结构", "MVP结构", "retrofit&okhttp使用",
-                "NestedScroll", "全景图", "3D动画", "等等"};
+                "NestedScroll", "全景图", "3D动画", "Viewpager与Scrollerview冲突", "等等"};
     }
 
 
@@ -112,6 +113,11 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
                     break;
                     case 13: {
                         Intent mIntent = new Intent(mContext, ThirdDimensionActivity.class);
+                        mContext.startActivity(mIntent);
+                    }
+                    break;
+                    case 14: {
+                        Intent mIntent = new Intent(mContext, TouchConflictActivity.class);
                         mContext.startActivity(mIntent);
                     }
                     break;

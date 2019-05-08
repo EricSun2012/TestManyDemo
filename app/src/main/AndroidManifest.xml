@@ -32,6 +32,8 @@
         <activity android:name=".download.DownloadActivity" />
         <activity android:name=".panorama.PanoramaActivity" />
         <activity android:name=".ThridDimensional.ThirdDimensionActivity" />
+
+        <activity android:name=".touchconflict.TouchConflictActivity" />
     </application>
 
 </manifest>

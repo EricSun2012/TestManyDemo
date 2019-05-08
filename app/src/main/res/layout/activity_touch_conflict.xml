@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.robot.anyDemo.touchconflict.VerticalScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/secondViewPager"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/firstViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:orientation="vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1231k3j1;kl2j3;lk12j3kj21;k3j;lk12
+123jp12j3poi1j23kl123
+1lk2h3jl1h23l12h3lk123
+1k23hlk12h3ljk12h3lh21ou3h1lou2h3lou12hg3pou12h3pou12ho31
+" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1231k3j1;kl2j3;lk12j3kj21;k3j;lk12
+123jp12j3poi1j23kl123
+1lk2h3jl1h23l12h3lk123
+1k23hlk12h3ljk12h3lh21ou3h1lou2h3lou12hg3pou12h3pou12ho31
+" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1231k3j1;kl2j3;lk12j3kj21;k3j;lk12
+123jp12j3poi1j23kl123
+1lk2h3jl1h23l12h3lk123
+1k23hlk12h3ljk12h3lh21ou3h1lou2h3lou12hg3pou12h3pou12ho31
+" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1231k3j1;kl2j3;lk12j3kj21;k3j;lk12
+123jp12j3poi1j23kl123
+1lk2h3jl1h23l12h3lk123
+1k23hlk12h3ljk12h3lh21ou3h1lou2h3lou12hg3pou12h3pou12ho31
+" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1231k3j1;kl2j3;lk12j3kj21;k3j;lk12
+123jp12j3poi1j23kl123
+1lk2h3jl1h23l12h3lk123
+1k23hlk12h3ljk12h3lh21ou3h1lou2h3lou12hg3pou12h3pou12ho31
+" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1231k3j1;kl2j3;lk12j3kj21;k3j;lk12
+123jp12j3poi1j23kl123
+1lk2h3jl1h23l12h3lk123
+1k23hlk12h3ljk12h3lh21ou3h1lou2h3lou12hg3pou12h3pou12ho31
+" />
+
+        </LinearLayout>
+
+
+    </com.robot.anyDemo.touchconflict.VerticalScrollView>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/secondViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollview" />
+
+</android.support.constraint.ConstraintLayout>
