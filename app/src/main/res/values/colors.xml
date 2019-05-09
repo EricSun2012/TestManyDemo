@@ -8,6 +8,9 @@
     <color name="colorTransparentGrey">#64333333</color>
 
 
+    <color name="shadow_default_color">#1a000000</color>
+    <color name="shadow_card_default_color">#ffffff</color>
+
     <!--reds-->
     <color name="md_red_50">#FFEBEE</color>
     <color name="md_red_100">#FFCDD2</color>

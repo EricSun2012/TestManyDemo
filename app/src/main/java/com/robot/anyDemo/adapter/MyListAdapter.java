@@ -14,6 +14,7 @@ import com.robot.anyDemo.ThridDimensional.ThirdDimensionActivity;
 import com.robot.anyDemo.animate.AnimateActivity;
 import com.robot.anyDemo.dataStructure.DataStructureActivity;
 import com.robot.anyDemo.download.DownloadActivity;
+import com.robot.anyDemo.dragger2.Dagger2Activity;
 import com.robot.anyDemo.gouwuche.BuyCarActivity;
 import com.robot.anyDemo.R;
 import com.robot.anyDemo.advertise.AdvertiseActivity;
@@ -34,7 +35,8 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
         contents = new String[]{"动画总结", "room初步使用", "RxJava",
                 "购物车动画", "广告轮播图", "greendao配置使用[未]", "断点续传",
                 "缓存配置[未]", "数据结构", "MVP结构", "retrofit&okhttp使用",
-                "NestedScroll", "全景图", "3D动画", "Viewpager与Scrollerview冲突", "等等"};
+                "NestedScroll", "全景图", "3D动画", "Viewpager与Scrollerview冲突",
+                "Dragger2", "等等"};
     }
 
 
@@ -57,74 +59,70 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
             public void onClick(View v) {
                 switch (i) {
                     case 0: {
-                        Intent mIntent = new Intent(mContext, AnimateActivity.class);
-                        mContext.startActivity(mIntent);
+                        startActivityFromAdapter(AnimateActivity.class);
                     }
                     break;
                     case 1: {
-                        Intent mIntent = new Intent(mContext, RoomActivity.class);
-                        mContext.startActivity(mIntent);
+                        startActivityFromAdapter(RoomActivity.class);
                     }
                     break;
                     case 2: {
-                        Intent mIntent = new Intent(mContext, RxActivity.class);
-                        mContext.startActivity(mIntent);
+                        startActivityFromAdapter(RxActivity.class);
                     }
                     break;
                     case 3: {
-                        Intent mIntent = new Intent(mContext, BuyCarActivity.class);
-                        mContext.startActivity(mIntent);
+                        startActivityFromAdapter(BuyCarActivity.class);
                     }
                     break;
                     case 4: {
-                        Intent mIntent = new Intent(mContext, AdvertiseActivity.class);
-                        mContext.startActivity(mIntent);
+                        startActivityFromAdapter(AdvertiseActivity.class);
                     }
                     break;
                     case 6: {
-                        Intent mIntent = new Intent(mContext, DownloadActivity.class);
-                        mContext.startActivity(mIntent);
+                        startActivityFromAdapter(DownloadActivity.class);
                     }
                     break;
                     case 8: {
-                        Intent mIntent = new Intent(mContext, DataStructureActivity.class);
-                        mContext.startActivity(mIntent);
+                        startActivityFromAdapter(DataStructureActivity.class);
                     }
                     break;
                     case 9: {
-                        Intent mIntent = new Intent(mContext, MvpActivity.class);
-                        mContext.startActivity(mIntent);
+                        startActivityFromAdapter(MvpActivity.class);
                     }
                     break;
                     case 10: {
-                        Intent mIntent = new Intent(mContext, RetrofitActivity.class);
-                        mContext.startActivity(mIntent);
+                        startActivityFromAdapter(RetrofitActivity.class);
                     }
                     break;
                     case 11: {
-                        Intent mIntent = new Intent(mContext, NestedScrollActivity.class);
-                        mContext.startActivity(mIntent);
+                        startActivityFromAdapter(NestedScrollActivity.class);
                     }
                     break;
                     case 12: {
-                        Intent mIntent = new Intent(mContext, PanoramaActivity.class);
-                        mContext.startActivity(mIntent);
+                        startActivityFromAdapter(PanoramaActivity.class);
                     }
                     break;
                     case 13: {
-                        Intent mIntent = new Intent(mContext, ThirdDimensionActivity.class);
-                        mContext.startActivity(mIntent);
+                        startActivityFromAdapter(ThirdDimensionActivity.class);
                     }
                     break;
                     case 14: {
-                        Intent mIntent = new Intent(mContext, TouchConflictActivity.class);
-                        mContext.startActivity(mIntent);
+                        startActivityFromAdapter(TouchConflictActivity.class);
+                    }
+                    break;
+                    case 15: {
+                        startActivityFromAdapter(Dagger2Activity.class);
                     }
                     break;
                 }
             }
         });
 
+    }
+
+    public void startActivityFromAdapter(Class objClass) {
+        Intent mIntent = new Intent(mContext, objClass);
+        mContext.startActivity(mIntent);
     }
 
     @Override

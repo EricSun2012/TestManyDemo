@@ -417,7 +417,7 @@ public class ClockView extends View {
                 getWidth() - mPaddingRight - mTextRect.height() / 2 - 1.5f * mScaleLength,
                 getHeight() - mPaddingBottom - mTextRect.height() / 2 - 1.5f * mScaleLength);
         //matrix默认会在三点钟方向开始颜色的渐变，为了吻合钟表十二点钟顺时针旋转的方向，把秒针旋转的角度减去90度
-        mGradientMatrix.setRotate(mSecondDegree - 90, getWidth() / 2, getHeight() / 2);
+        mGradientMatrix.setRotate(mSecondDegree - 89, getWidth() / 2, getHeight() / 2);
         mSweepGradient.setLocalMatrix(mGradientMatrix);
         mScaleArcPaint.setShader(mSweepGradient);
         mCanvas.drawArc(mScaleArcRectF, 0, 360, false, mScaleArcPaint);
