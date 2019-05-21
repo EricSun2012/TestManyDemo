@@ -35,6 +35,7 @@
 
         <activity android:name=".touchconflict.TouchConflictActivity" />
         <activity android:name=".dragger2.Dagger2Activity" />
+        <activity android:name=".Scroller.ScrollerActivity" />
     </application>
 
 </manifest>
