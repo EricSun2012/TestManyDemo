@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.liberic.ChameleonDialog;
+import com.robot.anyDemo.RefreshView.RefreshActivity;
 import com.robot.anyDemo.RxJava.RxActivity;
 import com.robot.anyDemo.Scroller.ScrollerActivity;
 import com.robot.anyDemo.ThridDimensional.ThirdDimensionActivity;
@@ -30,6 +32,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
 
     private Context mContext;
     private String[] contents;
+    private ChameleonDialog dialog;
 
     public MyListAdapter(Context context) {
         mContext = context;
@@ -37,7 +40,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
                 "购物车动画", "广告轮播图", "greendao配置使用[未]", "断点续传",
                 "缓存配置[未]", "数据结构", "MVP结构", "retrofit&okhttp使用",
                 "NestedScroll", "全景图", "3D动画", "Viewpager与Scrollerview冲突",
-                "Dragger2", "Scroller应用", "等等"};
+                "Dragger2", "Scroller应用","刷新", "等等"};
     }
 
 
@@ -117,6 +120,10 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
                     break;
                     case 16: {
                         startActivityFromAdapter(ScrollerActivity.class);
+                    }
+                    break;
+                    case 17: {
+                        startActivityFromAdapter(RefreshActivity.class);
                     }
                     break;
                 }
