@@ -1,7 +1,10 @@
 package com.robot.anyDemo.retrofit;
 
+import com.robot.anyDemo.base.BaseModel;
+import com.robot.anyDemo.base.BaseObserver;
 import com.robot.anyDemo.base.BasePresenter;
 
+import io.reactivex.Observable;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -14,17 +17,17 @@ public class RetrofitPresenter extends BasePresenter<RetrofitView> {
 
 
     public void requestMobileInfo(String phone) {
-        Call call = ApiRetrofit.getInstance().getApiService().getMobileInfo(phone);
-        call.enqueue(new Callback() {
+        Observable<String> call = ApiRetrofit.getInstance().getApiService().getRxMobileInfo(phone);
+        addDisposable(call, new BaseObserver<BaseModel>(baseView) {
             @Override
-            public void onResponse(Call call, Response response) {
-                if (response.code() == 200) {
-                    baseView.getMobileInfo(response.body().toString());
+            public void onSuccess(BaseModel o) {
+                if (o.getErrcode() == 200) {
+                    baseView.getMobileInfo(o.getResult().toString());
                 }
             }
 
             @Override
-            public void onFailure(Call call, Throwable t) {
+            public void onError(String msg) {
 
             }
         });
