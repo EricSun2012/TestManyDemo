@@ -4,9 +4,11 @@ import android.animation.AnimatorSet;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
+import android.graphics.drawable.AnimatedVectorDrawable;
 import android.view.animation.BounceInterpolator;
 import android.widget.ImageView;
 
+import com.robot.anyDemo.R;
 import com.robot.anyDemo.base.BasePresenter;
 import com.robot.anyDemo.base.BaseView;
 import com.robot.anyDemo.gouwuche.BizierEvaluator2;
@@ -74,7 +76,6 @@ public class AnimatePresenter extends BasePresenter {
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
-                Float value = (Float) animation.getAnimatedValue();
                 Point point = (Point) animation.getAnimatedValue();
                 imageView.setX(point.getX());
                 imageView.setY(point.getY());
@@ -82,5 +83,14 @@ public class AnimatePresenter extends BasePresenter {
         });
         animator.setDuration(300);
         animator.start();
+    }
+
+
+    public void startSvgAnimation(ImageView imageView) {
+        imageView.clearAnimation();
+        imageView.setImageDrawable(imageView.getResources().getDrawable(R.drawable.animal_svg_vector));
+
+        AnimatedVectorDrawable animatedVectorDrawable = (AnimatedVectorDrawable) imageView.getDrawable();
+        animatedVectorDrawable.start();
     }
 }

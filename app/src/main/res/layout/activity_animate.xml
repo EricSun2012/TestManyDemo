@@ -79,6 +79,20 @@
         app:layout_constraintLeft_toLeftOf="@+id/animate_value"
         app:layout_constraintTop_toBottomOf="@+id/animate_value" />
 
+
+    <Button
+        android:id="@+id/animate_svg"
+        android:layout_width="90dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:text="svg动画"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="@+id/animate_rotation"
+        app:layout_constraintTop_toBottomOf="@+id/animate_translation" />
+
+
     <ImageView
         android:id="@+id/animate_pic"
         android:layout_width="90dp"
@@ -87,7 +101,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/details_store_ic"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animate_translation" />
+        app:layout_constraintTop_toBottomOf="@+id/animate_svg" />
 
 
 </android.support.constraint.ConstraintLayout>

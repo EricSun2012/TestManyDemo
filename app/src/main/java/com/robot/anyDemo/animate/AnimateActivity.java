@@ -20,6 +20,8 @@ public class AnimateActivity extends BaseActivity<AnimatePresenter> implements B
 
     private Button colorButton;
 
+    private Button svgButton;
+
     @Override
     protected AnimatePresenter createPresenter() {
         return new AnimatePresenter(this);
@@ -35,12 +37,7 @@ public class AnimateActivity extends BaseActivity<AnimatePresenter> implements B
         imageView = findViewById(R.id.animate_pic);
 
         rotationButton = findViewById(R.id.animate_rotation);
-        rotationButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                presenter.startRotationProperty(imageView);
-            }
-        });
+        rotationButton.setOnClickListener(v -> presenter.startRotationProperty(imageView));
 
         scaleButton = findViewById(R.id.animate_scale);
         scaleButton.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +77,11 @@ public class AnimateActivity extends BaseActivity<AnimatePresenter> implements B
             public void onClick(View v) {
                 presenter.startColorProperty(imageView);
             }
+        });
+
+        svgButton = findViewById(R.id.animate_svg);
+        svgButton.setOnClickListener(v -> {
+            presenter.startSvgAnimation(imageView);
         });
 
     }
