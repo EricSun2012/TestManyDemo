@@ -56,4 +56,7 @@ dependencies {
 
     implementation 'com.trycatch.android:mysnackbar:1.2.2'
     implementation 'com.ufo:DWRefreshLayout:0.9.6'
+
+    implementation 'com.ethanhua:skeleton:1.1.2'
+    implementation 'io.supercharge:shimmerlayout:2.1.0'
 }
