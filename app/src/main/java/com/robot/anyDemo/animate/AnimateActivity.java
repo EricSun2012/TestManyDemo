@@ -1,5 +1,7 @@
 package com.robot.anyDemo.animate;
 
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -7,6 +9,7 @@ import android.widget.ImageView;
 import com.robot.anyDemo.R;
 import com.robot.anyDemo.base.BaseActivity;
 import com.robot.anyDemo.base.BaseView;
+import com.robot.anyDemo.widget.ProgressButton;
 
 public class AnimateActivity extends BaseActivity<AnimatePresenter> implements BaseView {
 
@@ -21,6 +24,12 @@ public class AnimateActivity extends BaseActivity<AnimatePresenter> implements B
     private Button colorButton;
 
     private Button svgButton;
+
+    private ProgressButton progressButton;
+
+    private Handler mHandler = new Handler();
+
+    private Runnable runnable;
 
     @Override
     protected AnimatePresenter createPresenter() {
@@ -84,6 +93,32 @@ public class AnimateActivity extends BaseActivity<AnimatePresenter> implements B
             presenter.startSvgAnimation(imageView);
         });
 
+
+        progressButton = findViewById(R.id.animate_progress);
+        progressButton.setTag(0);
+
+        runnable = new Runnable() {
+            @Override
+            public void run() {
+
+                int progress = (int) progressButton.getTag();
+                if (progress >= 100) {
+                    progressButton.setTag(0);
+                    progressButton.reset();
+                    return;
+                }
+                progress += 2;
+                progressButton.setProgress(progress);
+                progressButton.setTag(progress);
+                mHandler.postDelayed(runnable, 200);
+            }
+        };
+        progressButton.setOnClickListener(v -> {
+
+
+            mHandler.postDelayed(runnable, 200);
+
+        });
     }
 
     @Override

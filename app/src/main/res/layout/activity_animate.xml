@@ -103,5 +103,20 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/animate_svg" />
 
+    <com.robot.anyDemo.widget.ProgressButton
+        android:id="@+id/animate_progress"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:text="@string/app_name"
+        android:textAllCaps="false"
+        android:textColor="@color/md_white_1000"
+        app:buttonColor="@color/md_amber_300"
+        app:cornerRadius="8dp"
+        app:progressBackColor="@color/md_amber_300"
+        app:layout_constraintLeft_toLeftOf="@+id/animate_svg"
+        app:layout_constraintTop_toBottomOf="@+id/animate_svg"
+        app:progressColor="@color/md_amber_800"
+        app:progressMargin="2dp" />
 
 </android.support.constraint.ConstraintLayout>
