@@ -1,8 +1,9 @@
 package com.robot.anyDemo.download;
 
 import android.os.Environment;
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
+
+import androidx.annotation.NonNull;
 
 import java.io.File;
 import java.io.IOException;

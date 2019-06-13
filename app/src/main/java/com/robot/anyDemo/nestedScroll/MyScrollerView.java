@@ -1,8 +1,9 @@
 package com.robot.anyDemo.nestedScroll;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v4.view.NestedScrollingParent2;
+
+import androidx.annotation.NonNull;
+import androidx.core.view.NestedScrollingParent2;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;

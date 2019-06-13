@@ -1,8 +1,9 @@
 package com.robot.anyDemo.touchconflict;
 
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
+
+import androidx.viewpager.widget.ViewPager;
 
 import com.robot.anyDemo.R;
 import com.robot.anyDemo.advertise.DefaultTransformer;

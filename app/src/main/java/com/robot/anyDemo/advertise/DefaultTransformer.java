@@ -1,9 +1,10 @@
 package com.robot.anyDemo.advertise;
 
-import android.support.v4.view.ViewPager.PageTransformer;
 import android.view.View;
 
-public class DefaultTransformer implements PageTransformer {
+import androidx.viewpager.widget.ViewPager;
+
+public class DefaultTransformer implements ViewPager.PageTransformer {
 	private static float MIN_SCALE = 0.65f;
 
 	private static float MIN_ALPHA = 0.5f;

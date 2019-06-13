@@ -1,7 +1,6 @@
 package com.robot.anyDemo.animate;
 
 import android.os.Handler;
-import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;

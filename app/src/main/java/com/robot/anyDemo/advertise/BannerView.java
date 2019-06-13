@@ -3,9 +3,6 @@ package com.robot.anyDemo.advertise;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
@@ -15,6 +12,10 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.robot.anyDemo.R;
 

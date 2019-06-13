@@ -14,7 +14,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
