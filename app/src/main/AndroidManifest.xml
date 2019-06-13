@@ -40,6 +40,7 @@
         <activity android:name=".dragger2.Dagger2Activity" />
         <activity android:name=".Scroller.ScrollerActivity" />
         <activity android:name=".RefreshView.RefreshActivity" />
+        <activity android:name=".dataBinding.DataBindingActivity" />
     </application>
 
 </manifest>

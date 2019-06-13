@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+        <variable
+            name="actionTag"
+            type="com.robot.anyDemo.dataBinding.ActionTag" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dataBindingRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".dataBinding.DataBindingActivity">
+
+
+        <Button
+            android:id="@+id/btn_title"
+            android:layout_width="180dp"
+            android:layout_height="34dp"
+            android:text="@{actionTag.title}"
+            android:textColor="@color/md_amber_300"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

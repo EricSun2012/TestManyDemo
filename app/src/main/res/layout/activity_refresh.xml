@@ -9,7 +9,7 @@
         android:id="@+id/refresh_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:refresh_style="style_material">
+        app:refresh_style="style_default">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycleView"
