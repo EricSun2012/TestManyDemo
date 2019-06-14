@@ -18,10 +18,35 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name="Default"
+            android:enabled="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:targetActivity=".MainActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name="Test"
+            android:enabled="false"
+            android:icon="@drawable/animal_svg"
+            android:label="@string/cancel_button"
+            android:targetActivity=".MainActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity-alias>
 
         <activity android:name=".RxJava.RxActivity" />
         <activity android:name=".animate.AnimateActivity" />
@@ -40,6 +65,7 @@
         <activity android:name=".dragger2.Dagger2Activity" />
         <activity android:name=".Scroller.ScrollerActivity" />
         <activity android:name=".RefreshView.RefreshActivity" />
+        <activity android:name=".dynamicIcon.DynamicIconActivity" />
     </application>
 
 </manifest>
