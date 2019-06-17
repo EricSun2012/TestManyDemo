@@ -19,6 +19,7 @@ import com.robot.anyDemo.dataBinding.DataBindingActivity;
 import com.robot.anyDemo.dataStructure.DataStructureActivity;
 import com.robot.anyDemo.download.DownloadActivity;
 import com.robot.anyDemo.dragger2.Dagger2Activity;
+import com.robot.anyDemo.dynamicIcon.DynamicIconActivity;
 import com.robot.anyDemo.gouwuche.BuyCarActivity;
 import com.robot.anyDemo.R;
 import com.robot.anyDemo.advertise.AdvertiseActivity;
@@ -40,7 +41,8 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
                 "购物车动画", "广告轮播图", "greendao配置使用[未]", "断点续传",
                 "缓存配置[未]", "数据结构", "MVP结构", "retrofit&okhttp使用",
                 "NestedScroll", "全景图", "3D动画", "Viewpager与Scrollerview冲突",
-                "Dragger2", "Scroller应用", "刷新+骨架屏", "DataBinding", "等等"};
+                "Dragger2", "Scroller应用", "刷新+骨架屏", "动态改变icon",
+                "DataBinding", "等等"};
     }
 
 
@@ -127,6 +129,10 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
                     }
                     break;
                     case 18: {
+                        startActivityFromAdapter(DynamicIconActivity.class);
+                    }
+                    break;
+                    case 19: {
                         startActivityFromAdapter(DataBindingActivity.class);
                     }
                     break;

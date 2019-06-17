@@ -4,6 +4,7 @@ import android.os.Handler;
 import android.widget.Button;
 
 import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ObservableField;
 
 import com.robot.anyDemo.R;
 import com.robot.anyDemo.base.BaseActivity;
@@ -40,16 +41,16 @@ public class DataBindingActivity extends BaseActivity<DataBindingPresenter> impl
     @Override
     public void initData() {
         mTag = new ActionTag();
-        mTag.setTitle("123");
+        mTag.setTitle(new ObservableField<>("123"));
         presenter.bindingData(mTag);
 
 
         mHandler = new Handler(getMainLooper());
         mHandler.postDelayed(() -> {
 //            titleButton.setText("12345");
-            mTag.setTitle("4322");
+            mTag.setTitle(new ObservableField<>("344556"));
 //            presenter.bindingData(mTag);
-            Logger.getGlobal().log(Level.INFO, mTag.getTitle());
+            Logger.getGlobal().log(Level.INFO, mTag.getTitle().get());
         }, 4000);
 
     }
