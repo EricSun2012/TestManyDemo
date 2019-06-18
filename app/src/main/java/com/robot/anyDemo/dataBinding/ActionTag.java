@@ -2,8 +2,6 @@ package com.robot.anyDemo.dataBinding;
 
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
-import androidx.databinding.Observable;
-import androidx.databinding.ObservableField;
 
 import com.robot.anyDemo.BR;
 
@@ -17,13 +15,14 @@ import com.robot.anyDemo.BR;
  * 修改时间：2019-06-13 17:33
  * 修改备注：
  */
-public class ActionTag {
+public class ActionTag extends BaseObservable {
 
     private String time;
     private int value;
-//    @Bindable
-    private ObservableField<String> title;
 
+    private String title;
+
+    @Bindable
     public String getTime() {
         return time;
     }
@@ -32,6 +31,7 @@ public class ActionTag {
         this.time = time;
     }
 
+    @Bindable
     public int getValue() {
         return value;
     }
@@ -40,15 +40,16 @@ public class ActionTag {
         this.value = value;
     }
 
-    public ObservableField<String> getTitle() {
+    @Bindable
+    public String getTitle() {
         return title;
     }
 
     /*
      这里修改title内容后，将通知视图更新
      */
-    public void setTitle(ObservableField<String> title) {
+    public void setTitle(String title) {
         this.title = title;
-//        notifyPropertyChanged(BR.title);
+        notifyPropertyChanged(BR.title);
     }
 }

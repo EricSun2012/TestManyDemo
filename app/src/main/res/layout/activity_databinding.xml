@@ -9,6 +9,10 @@
         <variable
             name="actionTag"
             type="com.robot.anyDemo.dataBinding.ActionTag" />
+
+        <variable
+            name="buttonListener"
+            type="android.view.View.OnClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,6 +26,7 @@
             android:id="@+id/btn_title"
             android:layout_width="180dp"
             android:layout_height="34dp"
+            android:onClick="@{buttonListener}"
             android:text="@={actionTag.title}"
             android:textColor="@color/md_amber_300"
             android:textSize="14sp"

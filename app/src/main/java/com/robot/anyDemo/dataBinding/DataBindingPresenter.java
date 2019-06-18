@@ -1,6 +1,7 @@
 package com.robot.anyDemo.dataBinding;
 
 import android.app.Activity;
+import android.view.View;
 
 import androidx.databinding.DataBindingUtil;
 
@@ -29,6 +30,10 @@ public class DataBindingPresenter extends BasePresenter<DataBindingView> {
 
     public void bindingData(ActionTag tag) {
         bind.setActionTag(tag);
+    }
+
+    public void bindingClick(View.OnClickListener listener) {
+        bind.setButtonListener(listener);
     }
 
 

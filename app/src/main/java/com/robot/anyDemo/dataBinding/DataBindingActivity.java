@@ -1,8 +1,11 @@
 package com.robot.anyDemo.dataBinding;
 
 import android.os.Handler;
+import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
+import androidx.databinding.BindingAdapter;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ObservableField;
 
@@ -24,7 +27,6 @@ import java.util.logging.Logger;
 public class DataBindingActivity extends BaseActivity<DataBindingPresenter> implements DataBindingView {
 
     private ActionTag mTag;
-    private Handler mHandler;
 
     private Button titleButton;
 
@@ -41,19 +43,16 @@ public class DataBindingActivity extends BaseActivity<DataBindingPresenter> impl
     @Override
     public void initData() {
         mTag = new ActionTag();
-        mTag.setTitle(new ObservableField<>("123"));
+        mTag.setTitle("123");
         presenter.bindingData(mTag);
 
-
-        mHandler = new Handler(getMainLooper());
-        mHandler.postDelayed(() -> {
-//            titleButton.setText("12345");
-            mTag.setTitle(new ObservableField<>("344556"));
-//            presenter.bindingData(mTag);
-            Logger.getGlobal().log(Level.INFO, mTag.getTitle().get());
-        }, 4000);
-
+        presenter.bindingClick(v -> {
+            titleButton.setText("12345");
+            Logger.getGlobal().log(Level.INFO, mTag.getTitle());
+            Toast.makeText(v.getContext(), mTag.getTitle(), Toast.LENGTH_SHORT).show();
+        });
     }
+
 
     @Override
     public void initView() {
