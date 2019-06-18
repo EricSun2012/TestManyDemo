@@ -22,6 +22,18 @@ public class ActionTag extends BaseObservable {
 
     private String title;
 
+    private boolean showTime;
+
+    @Bindable
+    public boolean isShowTime() {
+        return showTime;
+    }
+
+    public void setShowTime(boolean showTime) {
+        this.showTime = showTime;
+        notifyPropertyChanged(BR.showTime);
+    }
+
     @Bindable
     public String getTime() {
         return time;

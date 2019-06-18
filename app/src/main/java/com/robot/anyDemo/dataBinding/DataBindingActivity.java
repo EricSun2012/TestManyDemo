@@ -44,10 +44,12 @@ public class DataBindingActivity extends BaseActivity<DataBindingPresenter> impl
     public void initData() {
         mTag = new ActionTag();
         mTag.setTitle("123");
+        mTag.setShowTime(true);
         presenter.bindingData(mTag);
 
         presenter.bindingClick(v -> {
             titleButton.setText("12345");
+            mTag.setShowTime(false);
             Logger.getGlobal().log(Level.INFO, mTag.getTitle());
             Toast.makeText(v.getContext(), mTag.getTitle(), Toast.LENGTH_SHORT).show();
         });
