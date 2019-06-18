@@ -41,7 +41,7 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
                 "购物车动画", "广告轮播图", "greendao配置使用[未]", "断点续传",
                 "缓存配置[未]", "数据结构", "MVP结构", "retrofit&okhttp使用",
                 "NestedScroll", "全景图", "3D动画", "Viewpager与Scrollerview冲突",
-                "Dragger2", "Scroller应用", "刷新+骨架屏", "动态改变icon",
+                "Dragger2", "Scroller应用", "刷新+骨架屏+snakeBar", "动态改变icon",
                 "DataBinding", "等等"};
     }
 
