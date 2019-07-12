@@ -10,6 +10,12 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "bY4Dm93p8wA6f82NKzRGe",
+                GETUI_APP_KEY   : "iUQPv98rDI9VoE1ICm6Q03",
+                GETUI_APP_SECRET: "brdaEDayzk9onNVpwAOQT3"
+        ]
     }
     buildTypes {
         release {
@@ -23,6 +29,11 @@ android {
     }
     dataBinding {
         enabled = true
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
     }
 }
 
@@ -48,7 +59,7 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
     implementation 'com.google.android.material:material:1.0.0'
-
+    implementation 'org.greenrobot:eventbus:3.1.1'
     implementation 'com.google.vr:sdk-panowidget:1.80.0'
 
     implementation 'com.google.dagger:dagger:2.22.1'
