@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.robot.anyDemo.IPC_Binder.BinderActivity;
 import com.robot.anyDemo.RefreshView.RefreshActivity;
 import com.robot.anyDemo.RxJava.RxActivity;
 import com.robot.anyDemo.Scroller.ScrollerActivity;
@@ -37,14 +38,13 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
 
     public MyListAdapter(Context context) {
         mContext = context;
-        contents = new String[]{"动画总结", "room初步使用", "RxJava",
-                "购物车动画", "广告轮播图", "greendao配置使用[未]", "断点续传",
-                "缓存配置[未]", "数据结构", "MVP结构", "retrofit&okhttp使用",
-                "NestedScroll", "全景图", "3D动画", "Viewpager与Scrollerview冲突",
-                "Dragger2", "Scroller应用", "刷新+骨架屏+snakeBar", "动态改变icon",
-                "DataBinding", "等等"};
+        contents = new String[]{"0.动画总结", "1.room初步使用", "2.RxJava",
+                "3.购物车动画", "4.广告轮播图", "5.greendao配置使用[未]", "6.断点续传",
+                "7.缓存配置[未]", "8.数据结构", "9.MVP结构", "10.retrofit&okhttp使用",
+                "11.NestedScroll", "12.全景图", "13.3D动画", "14.Viewpager与Scrollerview冲突",
+                "15.Dragger2", "16.Scroller应用", "17.刷新+骨架屏+snakeBar", "18.动态改变icon",
+                "19.DataBinding", "20.Binder IPC", "等等"};
     }
-
 
     @NonNull
     @Override
@@ -134,6 +134,10 @@ public class MyListAdapter extends RecyclerView.Adapter<MyListAdapter.MyViewHold
                     break;
                     case 19: {
                         startActivityFromAdapter(DataBindingActivity.class);
+                    }
+                    break;
+                    case 20: {
+                        startActivityFromAdapter(BinderActivity.class);
                     }
                     break;
                 }

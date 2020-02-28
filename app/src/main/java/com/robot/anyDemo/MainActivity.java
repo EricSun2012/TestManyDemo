@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             notificationManager.createNotificationChannel(channel);
         }
-        notificationManager.notify(notifiId, notification);
+//        notificationManager.notify(notifiId, notification);
 
 
 //        new AlertDialog.Builder(this)
